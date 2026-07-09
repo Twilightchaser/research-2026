@@ -1,43 +1,47 @@
-# 老年人姿态识别系统
+# research-2026
 
-本项目是一个面向居家养老和远程看护场景的嵌入式姿态识别系统。系统基于 STM32F103C6T6、ADXL345、ESP8266、OLED、OneNET 和微信小程序，实现正常、疑似跌倒、久坐三类状态识别，并在小程序端提供 AI 风险评估和历史记录。
+这是 2026 年学习、实验和项目资料仓库，用于集中管理嵌入式、AI、硬件设计、控制理论、学习笔记和完整项目。
 
-## 主要功能
-
-- 姿态识别：通过 ADXL345 三轴加速度数据判断正常、疑似跌倒和久坐状态。
-- 本地显示：OLED 显示当前状态、姿态角和静止时间。
-- 云端同步：ESP8266 通过 MQTT 将设备属性上传到 OneNET。
-- 小程序看护：微信小程序显示实时状态、风险等级、AI 风险评估、关怀建议和历史记录。
-- 演示闭环：支持从开发板采集、本地识别、云端同步到手机端展示的完整演示。
-
-## 目录结构
+## 仓库结构
 
 ```text
-APP/Template program/        微信小程序工程
-程序/                         STM32 Keil 工程和外设驱动
-原理图/                       系统原理图
-提交用/                       技术文档、演示脚本、PPT 和重点代码包
+research-2026
+├── Embedded-System/        嵌入式学习
+│   ├── STM32-Basics/
+│   ├── Sensor-System/
+│   └── Motor-Control/
+├── AI-Learning/            AI 学习
+│   ├── Machine-Learning/
+│   ├── OpenCV/
+│   └── PyTorch/
+├── Hardware-Design/        硬件设计
+│   ├── Circuit/
+│   └── PCB/
+├── Control-Theory/         控制学习
+│   ├── PID/
+│   └── Simulation/
+├── Notes/                  学习笔记
+├── Projects/               完整项目
+│   ├── Elder-Posture-Recognition/
+│   ├── Smart-Environment/
+│   └── AI-Car/
+└── README.md
 ```
 
-## 硬件组成
+## 当前项目
 
-- 主控：STM32F103C6T6
-- 姿态传感器：ADXL345
-- 无线通信：ESP8266
-- 本地显示：OLED
-- 云平台：OneNET
-- 移动端：微信小程序
+### Elder-Posture-Recognition
 
-## 运行说明
+老年人姿态识别系统，基于 STM32F103C6T6、ADXL345、ESP8266、OLED、OneNET 和微信小程序，实现正常、疑似跌倒、久坐三类状态识别，并在小程序端提供 AI 风险评估和历史记录。
 
-1. 使用 Keil MDK 打开 `程序/Project/Template.uvprojx`，编译并烧录到 STM32F103C6T6 开发板。
-2. 确认 `程序/User_Libraries/user_esp8266_OneNetMQTT.h` 中 Wi-Fi 名称、密码和 OneNET 参数与现场环境一致。
-3. 使用微信开发者工具导入 `APP/Template program`。
-4. 开发板联网后，小程序首页可查看实时状态、AI 风险评估和历史记录。
+项目目录：
 
-## 状态码
+[Projects/Elder-Posture-Recognition](Projects/Elder-Posture-Recognition)
 
-- `0`：状态正常
-- `1`：疑似跌倒
-- `2`：久坐提醒
+## 管理约定
+
+- 学习过程中的单点知识放入对应学习目录。
+- 可完整运行、可演示、包含文档的内容放入 `Projects/`。
+- 大体积视频、编译中间产物和私有配置不提交到仓库。
+- 涉及 Wi-Fi、云平台 token、设备密钥的配置使用占位符，真实参数仅保留在本地。
 

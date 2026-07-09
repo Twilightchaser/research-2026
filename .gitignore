@@ -6,40 +6,40 @@ desktop.ini
 *.bak
 *.swp
 
-# Nested/local tool metadata
-APP/Template program/.git/
-APP/Template program/.agents/
-APP/Template program/project.private.config.json
+# Local/private tool metadata
+**/.agents/
+**/project.private.config.json
+Projects/Elder-Posture-Recognition/APP/Template program/.git/
 
 # Keil/ARM build intermediates
-程序/Project/Objects/
-程序/Project/Listings/
-程序/Project/*.uvguix.*
-程序/Project/*.uvoptx.bak
-程序/Project/*.scvd
-程序/Project/*.dbgconf
-程序/Project/*.dep
-程序/Project/*.crf
-程序/Project/*.d
-程序/Project/*.o
-程序/Project/*.axf
-程序/Project/*.htm
-程序/Project/*.lnp
-程序/Project/*.map
-程序/Project/*.sct
-程序/Project/*.hex
-程序/Project/*.log
+**/Project/Objects/
+**/Project/Listings/
+**/Project/*.uvguix.*
+**/Project/*.uvoptx.bak
+**/Project/*.scvd
+**/Project/*.dbgconf
+**/Project/*.dep
+**/Project/*.crf
+**/Project/*.d
+**/Project/*.o
+**/Project/*.axf
+**/Project/*.htm
+**/Project/*.lnp
+**/Project/*.map
+**/Project/*.sct
+**/Project/*.hex
+**/Project/*.log
 
 # Large demo media and temporary submission captures
-提交用/*.mp4
-提交用/*.mov
-提交用/*.avi
-提交用/*.mkv
-提交用/*.png
-提交用/*.jpg
-提交用/*.jpeg
-提交用/*.pdf
+Projects/Elder-Posture-Recognition/Deliverables/*.mp4
+Projects/Elder-Posture-Recognition/Deliverables/*.mov
+Projects/Elder-Posture-Recognition/Deliverables/*.avi
+Projects/Elder-Posture-Recognition/Deliverables/*.mkv
+Projects/Elder-Posture-Recognition/Deliverables/*.png
+Projects/Elder-Posture-Recognition/Deliverables/*.jpg
+Projects/Elder-Posture-Recognition/Deliverables/*.jpeg
+Projects/Elder-Posture-Recognition/Deliverables/*.pdf
 
-# Keep source docs and curated code package, but skip generated duplicates inside it
-提交用/重点代码库/
-提交用/重点代码库.zip
+# Generated duplicate submission package
+Projects/Elder-Posture-Recognition/Deliverables/重点代码库/
+Projects/Elder-Posture-Recognition/Deliverables/重点代码库.zip
