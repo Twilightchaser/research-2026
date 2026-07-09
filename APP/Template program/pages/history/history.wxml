@@ -1,0 +1,73 @@
+<view class="page-shell">
+  <view class="history-hero">
+    <view>
+      <text class="eyebrow">状态追踪</text>
+      <text class="title">数据历史记录</text>
+      <text class="subtitle">查看本次运行期间的姿态变化轨迹</text>
+    </view>
+    <button class="clear-button" bindtap="clearHistory">清空</button>
+  </view>
+
+  <view class="summary-card">
+    <view class="summary-head">
+      <text class="summary-title">看护摘要</text>
+      <text class="summary-subtitle">最近 {{historyStats.total}} 条</text>
+    </view>
+    <view class="summary-grid">
+      <view class="summary-item">
+        <text class="summary-number normal">{{historyStats.normal}}</text>
+        <text class="summary-label">正常</text>
+      </view>
+      <view class="summary-item">
+        <text class="summary-number fall">{{historyStats.fall}}</text>
+        <text class="summary-label">跌倒</text>
+      </view>
+      <view class="summary-item">
+        <text class="summary-number sitting">{{historyStats.sitting}}</text>
+        <text class="summary-label">久坐</text>
+      </view>
+    </view>
+    <view class="summary-alert">
+      <text class="summary-alert-label">最近异常</text>
+      <text class="summary-alert-value">{{historyStats.latestAlert}}</text>
+    </view>
+  </view>
+
+  <view class="ai-card {{historyRisk.riskClass}}">
+    <view class="ai-head">
+      <view>
+        <text class="ai-title">AI 历史分析</text>
+        <text class="ai-subtitle">{{historyRisk.basis}}</text>
+      </view>
+      <view class="ai-score {{historyRisk.riskClass}}">
+        <text class="ai-score-num">{{historyRisk.score}}</text>
+        <text class="ai-score-unit">分</text>
+      </view>
+    </view>
+    <view class="ai-track">
+      <view class="ai-fill {{historyRisk.riskClass}}" style="width: {{historyRisk.score}}%;"></view>
+    </view>
+    <text class="ai-reason">{{historyRisk.reason}}</text>
+    <text class="ai-advice">建议：{{historyRisk.advice}}</text>
+  </view>
+
+  <view class="history-card">
+    <view class="history-head">
+      <text class="history-title">记录明细</text>
+      <text class="history-count">{{historyRecords.length}} 条</text>
+    </view>
+    <view wx:if="{{historyRecords.length === 0}}" class="history-empty">
+      <text>暂无历史数据，请返回首页等待设备同步。</text>
+    </view>
+    <view wx:for="{{historyRecords}}" wx:key="id" class="history-item">
+      <view class="history-dot {{item.statusClass}}"></view>
+      <view class="history-copy">
+        <view class="history-row">
+          <text class="history-status {{item.statusClass}}">{{item.statusText}}</text>
+          <text class="history-time">{{item.time}}</text>
+        </view>
+        <text class="history-detail">姿态角 {{item.angle}}° · 静止 {{item.still}}s</text>
+      </view>
+    </view>
+  </view>
+</view>

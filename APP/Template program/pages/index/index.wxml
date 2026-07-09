@@ -1,0 +1,123 @@
+<view class="page-shell">
+  <view class="hero">
+    <view class="hero-copy">
+      <text class="eyebrow">实时守护</text>
+      <text class="title">老年人姿态识别系统</text>
+      <text class="subtitle">跌倒、久坐、正常活动状态在线监测</text>
+    </view>
+    <view class="hero-badge {{statusClass}}">
+      <text class="badge-icon">{{statusIcon}}</text>
+      <text class="badge-text">{{statusText}}</text>
+    </view>
+  </view>
+
+  <view class="time-card">
+    <view>
+      <text class="time-label">最近同步</text>
+      <text class="time-value">{{time}}</text>
+    </view>
+    <view class="pulse-dot"></view>
+  </view>
+
+  <view class="status-panel {{statusClass}}">
+    <view class="status-main">
+      <text class="status-icon">{{statusIcon}}</text>
+      <view class="status-copy">
+        <text class="status-title">{{statusText}}</text>
+        <text class="status-desc">{{statusDesc}}</text>
+      </view>
+    </view>
+    <view class="status-meter">
+      <view class="meter-track">
+        <view class="meter-fill {{statusClass}}"></view>
+      </view>
+      <text class="meter-text">{{riskText}}</text>
+    </view>
+  </view>
+
+  <view class="ai-card {{aiRisk.riskClass}}">
+    <view class="ai-head">
+      <view>
+        <text class="ai-title">AI 风险评估</text>
+        <text class="ai-subtitle">{{aiRisk.basis}}</text>
+      </view>
+      <view class="ai-score {{aiRisk.riskClass}}">
+        <text class="ai-score-num">{{aiRisk.score}}</text>
+        <text class="ai-score-unit">分</text>
+      </view>
+    </view>
+    <view class="ai-track">
+      <view class="ai-fill {{aiRisk.riskClass}}" style="width: {{aiRisk.score}}%;"></view>
+    </view>
+    <view class="ai-result">
+      <text class="ai-level {{aiRisk.riskClass}}">{{aiRisk.level}}</text>
+      <text class="ai-reason">{{aiRisk.reason}}</text>
+    </view>
+    <text class="ai-advice">建议：{{aiRisk.advice}}</text>
+  </view>
+
+  
+  <view class="metric-grid">
+    <view class="metric-card primary">
+      <text class="metric-label">当前状态码</text>
+      <text class="metric-value">{{Val1_Num}}</text>
+      <text class="metric-note">0 正常 / 1 跌倒 / 2 久坐</text>
+    </view>
+    <view class="metric-card">
+      <text class="metric-label">姿态角</text>
+      <text class="metric-value">{{Val2_Num}}<text class="metric-unit"> °</text></text>
+      <text class="metric-note">由三轴姿态数据计算</text>
+    </view>
+    <view class="metric-card">
+      <text class="metric-label">静止时长</text>
+      <text class="metric-value">{{Val3_Num}}<text class="metric-unit"> s</text></text>
+      <text class="metric-note">超过阈值触发久坐提醒</text>
+    </view>
+  </view>
+
+  <view class="care-card">
+    <view class="care-head">
+      <text class="care-title">关怀提醒</text>
+      <text class="care-tag {{statusClass}}">{{careTag}}</text>
+    </view>
+    <text class="care-text">{{careAdvice}}</text>
+    <view class="alert-status">
+      <text class="alert-label">处理状态</text>
+      <text class="alert-value {{alertHandled ? 'handled' : statusClass}}">{{alertHandled ? "已确认处理" : "待关注"}}</text>
+    </view>
+    <view class="care-actions">
+      <view class="care-action primary" bindtap="notifyFamily">模拟通知家属</view>
+      <view class="care-action" bindtap="confirmHandled">确认处理</view>
+    </view>
+  </view>
+
+  <view class="summary-card">
+    <view class="summary-head">
+      <text class="summary-title">看护摘要</text>
+      <text class="summary-subtitle">基于最近 {{historyStats.total}} 条记录</text>
+    </view>
+    <view class="summary-grid">
+      <view class="summary-item">
+        <text class="summary-number normal">{{historyStats.normal}}</text>
+        <text class="summary-label">正常</text>
+      </view>
+      <view class="summary-item">
+        <text class="summary-number fall">{{historyStats.fall}}</text>
+        <text class="summary-label">跌倒</text>
+      </view>
+      <view class="summary-item">
+        <text class="summary-number sitting">{{historyStats.sitting}}</text>
+        <text class="summary-label">久坐</text>
+      </view>
+    </view>
+    <view class="summary-alert">
+      <text class="summary-alert-label">最近异常</text>
+      <text class="summary-alert-value">{{historyStats.latestAlert}}</text>
+    </view>
+    <view class="action-row">
+      <view class="action-button primary" bindtap="refreshNow">{{isRefreshing ? "刷新中..." : "立即刷新"}}</view>
+      <view class="action-button" bindtap="openHistory">查看历史记录</view>
+    </view>
+  </view>
+  
+</view>

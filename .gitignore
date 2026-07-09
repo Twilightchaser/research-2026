@@ -1,0 +1,45 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+*.swp
+
+# Nested/local tool metadata
+APP/Template program/.git/
+APP/Template program/.agents/
+APP/Template program/project.private.config.json
+
+# Keil/ARM build intermediates
+程序/Project/Objects/
+程序/Project/Listings/
+程序/Project/*.uvguix.*
+程序/Project/*.uvoptx.bak
+程序/Project/*.scvd
+程序/Project/*.dbgconf
+程序/Project/*.dep
+程序/Project/*.crf
+程序/Project/*.d
+程序/Project/*.o
+程序/Project/*.axf
+程序/Project/*.htm
+程序/Project/*.lnp
+程序/Project/*.map
+程序/Project/*.sct
+程序/Project/*.hex
+程序/Project/*.log
+
+# Large demo media and temporary submission captures
+提交用/*.mp4
+提交用/*.mov
+提交用/*.avi
+提交用/*.mkv
+提交用/*.png
+提交用/*.jpg
+提交用/*.jpeg
+提交用/*.pdf
+
+# Keep source docs and curated code package, but skip generated duplicates inside it
+提交用/重点代码库/
+提交用/重点代码库.zip
