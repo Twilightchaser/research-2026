@@ -1,0 +1,13 @@
+{
+    "comment": "Add this to your Claude Code settings.json mcpServers block",
+    "mcpServers": {
+        "ads": {
+            "type": "stdio",
+            "command": "python",
+            "args": ["-m", "ads_mcp_server"],
+            "env": {
+                "ADS_PATH": "/path/to/your/ADS-installation"
+            }
+        }
+    }
+}
