@@ -1,0 +1,64 @@
+\documentclass[UTF8,12pt,letterpaper]{ctexart}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+\title{我的第一份 \LaTeX{} 文档}
+\author{
+  Nicolas%
+  \thanks{Funded by the College of Electrical and Automation Engineering,
+  Nanjing Normal University}
+}
+\date{2026年7月14日}
+
+\begin{document}
+
+\maketitle
+
+\section{文本格式}
+
+We have now added a title, author, and date to our first
+\LaTeX{} document!
+
+% 这一行是注释，不会显示在最终文档中。
+
+Some of the \textbf{greatest}
+\emph{discoveries} in \underline{science}
+were made by \textbf{\textit{accident}}.
+
+\section{数学公式}
+
+Einstein's mass--energy equivalence is
+
+\[
+E = mc^2.
+\]
+
+另一个公式为
+
+\[
+d = \frac{k\varphi(n)+1}{e}.
+\]
+
+\section{表格}
+
+\begin{table}[htbp]
+  \centering
+  \caption{一个简单的数字表格}
+  \label{tab:number-example}
+
+  \begin{tabular}{|c|c|c|}
+    \hline
+    1 & 2 & 3 \\
+    \hline
+    4 & 5 & 6 \\
+    \hline
+    7 & 8 & 9 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+表~\ref{tab:number-example} 展示了一个简单的 $3\times3$ 数字表格。
+
+\end{document}
