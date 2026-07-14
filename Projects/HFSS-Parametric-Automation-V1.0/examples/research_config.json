@@ -1,0 +1,23 @@
+{
+  "frequency": {
+    "analysis_start_ghz": 26.0,
+    "analysis_stop_ghz": 36.0,
+    "target_start_ghz": 30.0,
+    "target_stop_ghz": 35.0
+  },
+  "phase_shifter": {
+    "target_phase_deg": -45.0,
+    "max_phase_error_deg": 3.0,
+    "max_insertion_loss_db": 1.0,
+    "min_return_loss_db": 15.0
+  },
+  "tolerances_mm": {
+    "delta_phase_pin_height": 0.05,
+    "delta_phase_pin_side": 0.05,
+    "delta_phase_pin_x_position": 0.10,
+    "delta_air_gap": 0.05
+  },
+  "tolerance_samples": 40,
+  "random_seed": 20260714
+}
+

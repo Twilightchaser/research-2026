@@ -23,6 +23,8 @@ research-2026
 ├── Notes/                  学习笔记
 ├── Projects/               完整项目
 │   ├── Elder-Posture-Recognition/
+│   ├── ADS-MCP-Automation-V1.0/
+│   ├── HFSS-Parametric-Automation-V1.0/
 │   ├── Smart-Environment/
 │   └── AI-Car/
 └── README.md
@@ -37,6 +39,18 @@ research-2026
 项目目录：
 
 [Projects/Elder-Posture-Recognition](Projects/Elder-Posture-Recognition)
+
+### ADS-MCP-Automation V1.0
+
+通过 MCP 和 ADS Python API 执行工作区、原理图、仿真与参数调优的自动化项目。
+
+[Projects/ADS-MCP-Automation-V1.0](Projects/ADS-MCP-Automation-V1.0)
+
+### HFSS-Parametric-Automation V1.0
+
+基于 PyAEDT 的隔离参数扫描、Touchstone 指标分析、容差计划和工程检查工具。主线以人工验收通过的 `.aedt` 模型为基线，避免旧自动建模脚本的几何和端口错误。
+
+[Projects/HFSS-Parametric-Automation-V1.0](Projects/HFSS-Parametric-Automation-V1.0)
 
 ## 管理约定
 

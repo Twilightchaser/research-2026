@@ -1,0 +1,5 @@
+run_id,h1_center,delta_h,notes
+baseline,3.0mm,0.2mm,accepted baseline values
+h1_low,2.8mm,0.2mm,single-variable screening
+h1_high,3.2mm,0.2mm,single-variable screening
+

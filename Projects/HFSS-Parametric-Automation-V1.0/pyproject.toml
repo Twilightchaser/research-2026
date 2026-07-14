@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hfss-parametric-automation"
+version = "1.0.0"
+description = "Reusable PyAEDT workflow for isolated HFSS parameter variations and Touchstone evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Twilightchaser" }]
+dependencies = []
+
+[project.optional-dependencies]
+hfss = ["pyaedt"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+hfss-variations = "hfss_automation.variations:main"
+hfss-tolerance-plan = "hfss_automation.tolerance_plan:main"
+hfss-audit = "hfss_automation.audit:main"
+hfss-inspect = "hfss_automation.inspect_project:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

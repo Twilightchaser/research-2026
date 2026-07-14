@@ -1,0 +1,26 @@
+name: HFSS automation offline tests
+
+on:
+  push:
+    paths:
+      - "Projects/HFSS-Parametric-Automation-V1.0/**"
+      - ".github/workflows/hfss-parametric-tests.yml"
+  pull_request:
+    paths:
+      - "Projects/HFSS-Parametric-Automation-V1.0/**"
+      - ".github/workflows/hfss-parametric-tests.yml"
+
+jobs:
+  offline-tests:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: Projects/HFSS-Parametric-Automation-V1.0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e ".[dev]"
+      - run: python -m pytest -q
+
