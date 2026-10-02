@@ -26,7 +26,8 @@ research-2026
 │   ├── ADS-MCP-Automation-V1.0/
 │   ├── HFSS-Parametric-Automation-V1.0/
 │   ├── RLC-Frequency-Response-Analyzer/
-│   └── Measurement-Data-Inspector/
+│   ├── Measurement-Data-Inspector/
+│   └── Object-Detection-Experiment-Toolkit/
 └── README.md
 ~~~
 
@@ -39,12 +40,13 @@ research-2026
 | [HFSS-Parametric-Automation-V1.0](Projects/HFSS-Parametric-Automation-V1.0) | 基于 PyAEDT 的参数扫描、Touchstone 指标分析、容差计划和工程检查工具。 | 项目 README |
 | [RLC-Frequency-Response-Analyzer](Projects/RLC-Frequency-Response-Analyzer) | 计算串联/并联 RLC 网络的阻抗、相位与扫频 CSV。 | python Projects/RLC-Frequency-Response-Analyzer/rlc_analyzer.py --help |
 | [Measurement-Data-Inspector](Projects/Measurement-Data-Inspector) | 检查实验 CSV 的缺失值、统计量与 IQR 离群点，并可导出清洁数据。 | python Projects/Measurement-Data-Inspector/measurement_inspector.py --help |
+| [Object-Detection-Experiment-Toolkit](Projects/Object-Detection-Experiment-Toolkit) | 对目标检测标注与预测 CSV 计算分类 AP、mAP 与 IoU 匹配结果，用于复核真实实验数据。 | python Projects/Object-Detection-Experiment-Toolkit/detection_evaluator.py --help |
 
 ## 复现约定
 
 1. 先进入项目目录，阅读该项目的 README.md。
 2. 使用 README 给出的命令运行；命令行工具均支持 --help 查看参数。
-3. 涉及真实设备、商业仿真软件、云端服务或私密密钥的项目，以仓库内的占位配置为准，真实凭据仅保留本地。
+3. 涉及真实设备、商业仿真软件、云端服务或私密密钥的项目，以仓库内的占位配置为准，真实凭据仅保留在本地。
 4. 运行或修改后，请保留示例输入、输出与依赖版本，避免“能跑但没人知道怎么跑”的经典工程悲剧。
 
 ## 管理约定
