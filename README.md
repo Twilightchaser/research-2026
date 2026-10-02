@@ -27,7 +27,8 @@ research-2026
 │   ├── HFSS-Parametric-Automation-V1.0/
 │   ├── RLC-Frequency-Response-Analyzer/
 │   ├── Measurement-Data-Inspector/
-│   └── Object-Detection-Experiment-Toolkit/
+│   ├── Object-Detection-Experiment-Toolkit/
+│   └── DeepPCB-Lightweight-Detection/
 └── README.md
 ~~~
 
@@ -41,6 +42,7 @@ research-2026
 | [RLC-Frequency-Response-Analyzer](Projects/RLC-Frequency-Response-Analyzer) | 计算串联/并联 RLC 网络的阻抗、相位与扫频 CSV。 | python Projects/RLC-Frequency-Response-Analyzer/rlc_analyzer.py --help |
 | [Measurement-Data-Inspector](Projects/Measurement-Data-Inspector) | 检查实验 CSV 的缺失值、统计量与 IQR 离群点，并可导出清洁数据。 | python Projects/Measurement-Data-Inspector/measurement_inspector.py --help |
 | [Object-Detection-Experiment-Toolkit](Projects/Object-Detection-Experiment-Toolkit) | 对目标检测标注与预测 CSV 计算分类 AP、mAP 与 IoU 匹配结果，用于复核真实实验数据。 | python Projects/Object-Detection-Experiment-Toolkit/detection_evaluator.py --help |
+| [DeepPCB-Lightweight-Detection](Projects/DeepPCB-Lightweight-Detection) | YOLOv8n 的 VoVGSCSP2 轻量化骨干研究：记录 DeepPCB 上参数量、算力和检测性能的真实取舍。 | bash Projects/DeepPCB-Lightweight-Detection/scripts/run_deeppcb_experiment.sh <dataset> <weights> |
 
 ## 复现约定
 
