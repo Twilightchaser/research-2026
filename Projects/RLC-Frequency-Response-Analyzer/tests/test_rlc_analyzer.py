@@ -5,7 +5,7 @@ Run from repository root:
 """
 
 import importlib.util
-import math
+import sys
 import unittest
 from pathlib import Path
 
@@ -13,6 +13,7 @@ MODULE = Path(__file__).parents[1] / "rlc_analyzer.py"
 SPEC = importlib.util.spec_from_file_location("rlc_analyzer", MODULE)
 rlc_analyzer = importlib.util.module_from_spec(SPEC)
 assert SPEC and SPEC.loader
+sys.modules[SPEC.name] = rlc_analyzer
 SPEC.loader.exec_module(rlc_analyzer)
 
 
